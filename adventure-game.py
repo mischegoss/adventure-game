@@ -95,7 +95,7 @@ def foul_odor(option):
             break
         elif choice == "2":
             print("You have died and inglorious and stench-filled death. ")
-            game_over()
+            start_over()
             break
         else:
             print("Invalid entry, try again")
@@ -118,6 +118,22 @@ def glimmering_treasures(option):
         elif choice == "2":
             print("You have chosen to be satisfied " +
                   "with your newfound glorious wealth.")
+            start_over()
+            break
+        else:
+            print("Invalid entry, try again")
+
+
+def start_over():
+    print_pause("Would you like to play again?")
+    while True:
+        choice = input("(Please enter 1 for 'yes' or 2 for 'no'.)\n")
+        if choice == "1":
+            print("Let's play again!")
+            time.sleep(4)
+            play_game()
+            break
+        elif choice == "2":
             game_over()
             break
         else:
